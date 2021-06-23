@@ -27,6 +27,18 @@ git pull origin master
     注意其中,每次push成功之后必须切换本地master并分支pull拉取最新远程master分支,如果需要显眼推送请求请在创建一个新的分支修改并push,push之后会github界面上高亮显示
         ```
             如果操作的是共享仓库型号，建议对拉取请求使用主题分支。 从任何分支或提交都可发送拉取请求，但如果需要更新提议的更改，则可使用主题分支推送跟进提交。
+
+
+            再次进行显眼推送 如下:
+                分支推送完毕...
+                git checkout master          # 切换回master分支
+                git pull origin master       # 更新最新master分支
+                git checkout -b ci1          # 不要与其他分支重名
+                touch xxx.go                
+                vim xxx.go                   # 创建文件并写入操作
+                git add *
+                git commit -m "add xxx.go"
+                git push origin ci1
         ```
 
 
